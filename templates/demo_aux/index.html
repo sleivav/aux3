@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<br>
-    hola
-    {% for animal in farm_animals %}
-        <br/>
-        {{ animal }}
-    {% endfor %}
-</body>
-</html>
+{% extends 'demo_aux/base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for animal in farm_animals %}
+                <div class="col-sm-4">
+                    {{ animal }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
